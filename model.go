@@ -23,7 +23,7 @@ type Order struct {
 	BuyerID    string    `json:"buyer-id"`
 	ListingID  string    `json:"listing-id"`
 	Currency   string    `json:"currency"`
-	Amount     float64   `json:"selling-price"`
+	Amount     float64   `json:"amount"`
 	StateID    uint      `json:"state-id"`
 	CreatedAt  time.Time `json:"created-at"`
 	UpdatedAt  time.Time `json:"updated-at"`

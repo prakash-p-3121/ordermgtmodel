@@ -11,7 +11,7 @@ type OrderCreateReq struct {
 	BuyerID   *string  `json:"buyer-id"`
 	ListingID *string  `json:"listing-id"`
 	Currency  *string  `json:"currency"`
-	Amount    *float64 `json:"selling-price"`
+	Amount    *float64 `json:"amount"`
 }
 
 func (req *OrderCreateReq) Validate() errorlib.AppError {
@@ -51,11 +51,11 @@ func (req *OrderCreateReq) Validate() errorlib.AppError {
 	}
 
 	if req.Amount == nil {
-		return errorlib.NewBadReqError("billing-price-nil")
+		return errorlib.NewBadReqError("amount-nil")
 	}
 
 	if *req.Amount <= 0 {
-		return errorlib.NewBadReqError("selling-price<=0")
+		return errorlib.NewBadReqError("amount<=0")
 	}
 
 	return nil
