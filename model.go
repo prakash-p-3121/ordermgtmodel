@@ -3,15 +3,16 @@ package ordermgtmodel
 import "time"
 
 const (
-	OrderReceived             uint = 1
+	OrderCreated              uint = 1
 	OrderCancelled            uint = 2
-	OrderShipped              uint = 3
-	OrderOutForDelivery       uint = 4
-	OrderDelivered            uint = 5
-	OrderReturnRequested      uint = 6
-	OrderReturned             uint = 7
-	OrderReplacementRequested uint = 8
-	OrderReplaced             uint = 9
+	OrderProcessing           uint = 3
+	OrderShipped              uint = 4
+	OrderOutForDelivery       uint = 5
+	OrderDelivered            uint = 6
+	OrderReturnRequested      uint = 7
+	OrderReturned             uint = 8
+	OrderReplacementRequested uint = 9
+	OrderReplaced             uint = 10
 )
 
 type Order struct {
