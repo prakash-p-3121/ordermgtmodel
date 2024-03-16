@@ -15,42 +15,42 @@ type OrderCreateReq struct {
 }
 
 func (req *OrderCreateReq) Validate() errorlib.AppError {
-	if req.ProductID != nil {
+	if req.ProductID == nil {
 		return errorlib.NewBadReqError("product-id-nil")
 	}
 	if restlib.TrimAndCheckForEmptyString(req.ProductID) {
 		return errorlib.NewBadReqError("product-id-empty")
 	}
 
-	if req.SellerID != nil {
+	if req.SellerID == nil {
 		return errorlib.NewBadReqError("seller-id-nil")
 	}
 	if restlib.TrimAndCheckForEmptyString(req.SellerID) {
 		return errorlib.NewBadReqError("seller-id-empty")
 	}
 
-	if req.BuyerID != nil {
+	if req.BuyerID == nil {
 		return errorlib.NewBadReqError("buyer-id-nil")
 	}
 	if restlib.TrimAndCheckForEmptyString(req.BuyerID) {
 		return errorlib.NewBadReqError("buyer-id-empty")
 	}
 
-	if req.ListingID != nil {
+	if req.ListingID == nil {
 		return errorlib.NewBadReqError("listing-id-nil")
 	}
 	if restlib.TrimAndCheckForEmptyString(req.ListingID) {
 		return errorlib.NewBadReqError("listing-id-empty")
 	}
 
-	if req.Currency != nil {
+	if req.Currency == nil {
 		return errorlib.NewBadReqError("currency-nil")
 	}
 	if restlib.TrimAndCheckForEmptyString(req.Currency) {
 		return errorlib.NewBadReqError("currency-empty")
 	}
 
-	if req.Amount != nil {
+	if req.Amount == nil {
 		return errorlib.NewBadReqError("billing-price-nil")
 	}
 
